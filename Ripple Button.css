@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #000;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    padding: 18px 36px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 1000px;
+    border: none;
+    outline: none;
+    margin: 10px;
+    overflow: hidden;
+    color: white;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #4c059e, #D65CA6);
+}
+button:nth-child(2){
+    background: linear-gradient(90deg, #5F0304, #bb4533);
+}
+span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background: white;
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripples 1s linear 0s infinite;
+}
+@keyframes ripples {
+    0%{
+        width: 0%;
+        height: 0;
+        opacity: .5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
